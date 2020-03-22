@@ -25,6 +25,7 @@ mvn clean install
 
 # 停tomcat
 killTomcat
+echo "tomcat停止成功"
 
 # 删除原有工程
 rm -rf $TOMCAT_APP_PATH/webapps/ROOT
@@ -38,8 +39,10 @@ cd $TOMCAT_APP_PATH/webapps/
 mv order.war ROOT.war
 
 # 启动Tomcat
+echo "tomcat开始启动"
 cd $TOMCAT_APP_PATH/
 sh bin/startup.sh
+echo "tomcat启动成功"
 
 
 
